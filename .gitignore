@@ -1,0 +1,77 @@
+# BIAS project .gitignore
+# Goal: track code/config/text; ignore data, models, logs, and artifacts
+
+# 1) Ignore everything by default
+*
+
+# 2) Allow directories so rules can apply in subfolders
+!*/
+
+# 3) Whitelist code/config/text files
+!*.py
+!*.yml
+!*.yaml
+!*.txt
+!*.md
+!*.ini
+!*.cfg
+!*.json
+!.gitignore
+!.gitattributes
+!requirements.txt
+!environment.yml
+!README.md
+!LICENSE
+
+# 4) Explicitly ignore data, models, logs, results
+Data/
+Data/**
+experiments/
+experiments/**
+proj/
+proj/**
+**/logs/
+**/results/
+**/models/
+**/checkpoints/
+
+# 5) Common large/binary artifacts
+*.npy
+*.npz
+*.mat
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.pkl
+*.bin
+
+# 6) Images/videos (kept out unless whitelisted explicitly)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.mp4
+*.avi
+
+# 7) Notebooks and checkpoints
+*.ipynb
+.ipynb_checkpoints/
+
+# 8) Python cache & virtual envs
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 9) Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
